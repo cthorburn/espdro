@@ -34,6 +34,45 @@
 		(45 "User.4" user)
 	)
 	(setup
+		(stackup
+			(layer "F.SilkS"
+				(type "Top Silk Screen")
+			)
+			(layer "F.Paste"
+				(type "Top Solder Paste")
+			)
+			(layer "F.Mask"
+				(type "Top Solder Mask")
+				(thickness 0.01)
+			)
+			(layer "F.Cu"
+				(type "copper")
+				(thickness 0.035)
+			)
+			(layer "dielectric 1"
+				(type "core")
+				(thickness 1.51)
+				(material "FR4")
+				(epsilon_r 4.5)
+				(loss_tangent 0.02)
+			)
+			(layer "B.Cu"
+				(type "copper")
+				(thickness 0.035)
+			)
+			(layer "B.Mask"
+				(type "Bottom Solder Mask")
+				(thickness 0.01)
+			)
+			(layer "B.Paste"
+				(type "Bottom Solder Paste")
+			)
+			(layer "B.SilkS"
+				(type "Bottom Silk Screen")
+			)
+			(copper_finish "None")
+			(dielectric_constraints no)
+		)
 		(pad_to_mask_clearance 0)
 		(allow_soldermask_bridges_in_footprints no)
 		(tenting
@@ -50,6 +89,7 @@
 		)
 		(capping no)
 		(filling no)
+		(zone_defaults)
 		(pcbplotparams
 			(layerselection 0x00000000_00000000_55555555_5755f5ff)
 			(plot_on_all_layers_selection 0x00000000_00000000_00000000_00000000)
@@ -917,13 +957,13 @@
 	(footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
 		(layer "F.Cu")
 		(uuid "6ceb96d5-da05-4440-a4e8-75766a5c34b2")
-		(at 60.706 71.501 90)
+		(at 55.372 60.452 -90)
 		(descr "Resistor, Axial_DIN0204 series, Axial, Horizontal, pin pitch=5.08mm, 0.167W, length*diameter=3.6*1.6mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
 		(tags "Resistor Axial_DIN0204 series Axial Horizontal pin pitch 5.08mm 0.167W length 3.6mm diameter 1.6mm")
 		(property "Reference" "R1"
 			(at 2.54 -1.92 90)
 			(layer "F.SilkS")
-			(uuid "685e044b-4faa-41e8-8828-cc343ae7f4ba")
+			(uuid "2f51097b-f6ff-4620-a950-67e42c9efdcb")
 			(effects
 				(font
 					(size 1 1)
@@ -934,7 +974,7 @@
 		(property "Value" "10K"
 			(at 2.54 1.92 90)
 			(layer "F.Fab")
-			(uuid "c3751ca1-4cd1-4322-8758-7c4101393a14")
+			(uuid "a8fccb38-edf5-4b09-a08c-bba43796fcaa")
 			(effects
 				(font
 					(size 1 1)
@@ -946,7 +986,7 @@
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "f58b0075-d07e-4240-afdd-5c0dc8a18e4d")
+			(uuid "564b6b7f-de26-4295-bb18-9b86f54a1169")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -957,7 +997,7 @@
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "70b71db0-4acc-4f45-862f-38be8541758c")
+			(uuid "f8e0c536-5151-4e00-818d-52bd473004b9")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -989,16 +1029,6 @@
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
-			(start 0.62 -0.92)
-			(end 4.46 -0.92)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "e758f36f-f73f-4fb5-a1d3-ac7e3a02676c")
-		)
-		(fp_line
 			(start 0.62 0.92)
 			(end 4.46 0.92)
 			(stroke
@@ -1007,6 +1037,16 @@
 			)
 			(layer "F.SilkS")
 			(uuid "0a0184e1-27dd-4709-8f26-a3f06d7c1425")
+		)
+		(fp_line
+			(start 0.62 -0.92)
+			(end 4.46 -0.92)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "e758f36f-f73f-4fb5-a1d3-ac7e3a02676c")
 		)
 		(fp_rect
 			(start -0.95 -1.05)
@@ -1020,16 +1060,6 @@
 			(uuid "0ea30955-8c3d-4a3e-99be-9fa04bebf634")
 		)
 		(fp_line
-			(start 5.08 0)
-			(end 4.34 0)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "48cf1056-afbb-47bf-a6b3-55f23d622640")
-		)
-		(fp_line
 			(start 0 0)
 			(end 0.74 0)
 			(stroke
@@ -1038,6 +1068,16 @@
 			)
 			(layer "F.Fab")
 			(uuid "bc553afc-6255-4204-8cb8-857a42fa9abe")
+		)
+		(fp_line
+			(start 5.08 0)
+			(end 4.34 0)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "48cf1056-afbb-47bf-a6b3-55f23d622640")
 		)
 		(fp_rect
 			(start 0.74 -0.8)
@@ -1051,7 +1091,7 @@
 			(uuid "2be30bbb-7a66-4845-ae66-2fd8266dc880")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 2.54 0 90)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "a5b2d3fa-56e0-40b0-9888-31fb71542b20")
 			(effects
@@ -1062,7 +1102,7 @@
 			)
 		)
 		(pad "1" thru_hole circle
-			(at 0 0 90)
+			(at 0 0 270)
 			(size 1.4 1.4)
 			(drill 0.7)
 			(layers "*.Cu" "*.Mask")
@@ -1072,7 +1112,7 @@
 			(uuid "b0d7a2c1-ec9d-4e37-9610-44dd79b3331e")
 		)
 		(pad "2" thru_hole circle
-			(at 5.08 0 90)
+			(at 5.08 0 270)
 			(size 1.4 1.4)
 			(drill 0.7)
 			(layers "*.Cu" "*.Mask")
@@ -2439,6 +2479,19 @@
 		)
 		(embedded_fonts no)
 	)
+	(gr_text "ESP32-S3 DRO\n"
+		(at 98.552 36.83 0)
+		(layer "F.Cu")
+		(uuid "63230c1d-4e8a-4e10-a53a-d1608d1e9147")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.3)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
 	(segment
 		(start 121.158 51.689)
 		(end 124.587 48.26)
@@ -2462,46 +2515,6 @@
 		(layer "F.Cu")
 		(net "GND")
 		(uuid "cb728c4b-86f4-46b9-89b7-aaa0d7ed2c01")
-	)
-	(segment
-		(start 60.6215 71.5855)
-		(end 60.706 71.501)
-		(width 0.2)
-		(layer "F.Cu")
-		(net "VCC3V3")
-		(uuid "c9a452b4-beea-419a-b8bb-856a11f19d35")
-	)
-	(segment
-		(start 60.6215 76.5475)
-		(end 60.6215 71.5855)
-		(width 0.2)
-		(layer "F.Cu")
-		(net "VCC3V3")
-		(uuid "ea5c9427-0183-4df9-b1e3-c3a8d8e15b97")
-	)
-	(segment
-		(start 82.423 66.421)
-		(end 83.4815 67.9025)
-		(width 0.2)
-		(layer "F.Cu")
-		(net "Net-(U2-OE)")
-		(uuid "34e94e8b-ac4b-4647-bd34-78778e71b9b6")
-	)
-	(segment
-		(start 60.706 66.421)
-		(end 82.423 66.421)
-		(width 0.2)
-		(layer "F.Cu")
-		(net "Net-(U2-OE)")
-		(uuid "8e24598f-f9f6-457f-b677-778a3b03739d")
-	)
-	(segment
-		(start 83.4815 67.9025)
-		(end 83.4815 76.5475)
-		(width 0.2)
-		(layer "F.Cu")
-		(net "Net-(U2-OE)")
-		(uuid "c9926ba3-afeb-4067-9f70-a9f378ac56d9")
 	)
 	(embedded_fonts no)
 )
